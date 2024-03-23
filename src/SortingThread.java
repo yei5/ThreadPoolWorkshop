@@ -31,6 +31,10 @@ public class SortingThread implements Runnable {
 
             out.println("Sorted array: "+printArray(arr));
 
+            clientSocket.close();
+            in.close();
+            out.close();
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

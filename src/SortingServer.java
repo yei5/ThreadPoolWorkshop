@@ -22,8 +22,6 @@ public class SortingServer {
                 Socket clientSocket = serverSocket.accept();
                 System.out.println("server open at "+ SOCKET);
                 threadPool.execute(new SortingThread(clientSocket));
-                if(threadPool.isTerminated()) threadPool.close();
-                threadPool.close();
             }catch(IOException e){
                 e.printStackTrace();
             }
